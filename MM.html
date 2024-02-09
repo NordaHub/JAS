@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>JAS-Distribusjon - Where Quality Mines Success</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo">
+        <a href="#"><img src="assets\logon.png" alt="logo" /></a>
+      </div>
+      <ul class="nav__links">
+        <li class="navlink"><a href="index.html">HJEM</a></li>
+        <li class="navlink"><a href="https://millionminer.no/norge-asic-miner-hosting/">HOSTING</a></li>
+        <li class="navlink"><a href="MM.html">OM MILLIONMINER</a></li>
+        <li class="navlink"><a href="About.html">OM OSS</a></li>
+      </ul>
+      <button class="btn" onclick="openBookPopup()">BOOK MØTE</button>
+
+      <div id="bookpopup" class="bookpopup">
+        <span class="close-btn" onclick="closeBookPopup()">&times;</span>
+        <iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1OpoEL9SyyI4FYmIIGgkSDD7A3QYKn_SyG--ENnpgO1O47f4eajwgJ9wDNeySuvLEhpRQBsAJj?gv=true" width="100%" height="100%" frameborder="0"></iframe>
+      </div>    
+  </nav>
+  <div class="spacer"></div>  <div class="spacer"></div>  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="MMsection-container">
+    <div class="MMpicture-container">
+        <img src="assets\certificate_norway-566x800.jpg" alt="MMpicthing">
+    </div>
+    <div class="MMtext-container">
+        <h2>JAS-DISTRIBUSJON AS ANNONSERER NY AGENTURAVTALE MED
+          MM INTERNATIONAL TRADING FZO</h2>
+        <p>Pr 1.1.2024</p>
+        <div class="spacer"></div>
+        <h2></h2>
+        <p>JAS-Distribusjon AS styrker sin posisjon som leverandør av innovative teknologiløsninger ved å kunngjøre et nytt og spennende samarbeid. Selskapet har inngått et eksklusivt agentur med MillionMiner, ledende innen kryptomining-utstyr. Dette partnerskapet vil gi JAS-Distribusjon AS muligheten til å tilby cutting-edge kryptomining-utstyr til sine kunder.
+
+          Dette partnerskapet markerer en spennende fase for begge selskaper, og JAS-Distribusjon AS ser frem til å introdusere MillionMiners kryptomining-utstyr til sine kunder.
+          
+          MillionMiner er en anerkjent aktør innen kryptomining-sektoren, kjent for sine pålitelige og effektive produkter. Selskapet er dedikert til å levere toppmoderne løsninger for kryptomining.</p>
+    </div>
+  </div>
+  <div class="spacer"></div>  <div class="spacer"></div>
+  <div class="spacer"></div>  <div class="spacer"></div>
+  <footer class="section__container footer__container">
+    <span class="bg__blur"></span>
+    <span class="bg__blur footer__blur"></span>
+    <div class="footer__col">
+      <div class="footer__logo"><img src="assets\logon.png" alt="logo" /></div>
+      <p>
+        Take the first step towards a richer, slower life with our
+        unbeatable mining equipment.
+      </p>
+      <div class="footer__socials">
+        <a href="https://www.facebook.com/jas.distribusjon.as"><i class="ri-facebook-fill"></i></a>
+        <a href="https://www.youtube.com/@Jas-DistribusjonAS-nn5hr"><i class="ri-youtube-line"></i></a>
+        <a href="https://twitter.com/JASdistribusjon"><i class="ri-twitter-fill"></i></a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="#">Business</a>
+      <a href="#">Franchise</a>
+    </div>
+    <div class="footer__col">
+      <h4>About Us</h4>
+      <a href="https://www.millionminer.com/">MillionMiner.com</a>
+      <a href="#">NordaHub</a>
+    </div>
+    <div class="footer__col">
+      <h4>Contact</h4>
+      <a href="#">Contact Information
+        Call us or write us:</a>
+      <a href="https://api.whatsapp.com/send/?phone=%2B4740160977&text&type=phone_number&app_absent=0">WhatsApp: +47 40 16 09 77</a>
+      <a href="#footer">Phone: +47 22 34 33 83</a>
+    </div>
+  </footer>
+  <div class="footer__bar">
+    <p>JAS-Distribusjon</p>
+    <p>Org.nr: 932 726 920</p>
+  </div>
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+      document.getElementById("overlay").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+      document.getElementById("overlay").style.display = "none";
+    }
+    const wrapper = document.querySelector(".wrapper");
+  const carousel = document.querySelector(".carousel");
+  const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+  const arrowBtns = document.querySelectorAll(".wrapper i");
+  const carouselChildrens = [...carousel.children];
+  let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+  // Get the number of cards that can fit in the carousel at once
+  let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+  // Insert copies of the last few cards to beginning of carousel for infinite scrolling
+  carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+  carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+  });
+  // Insert copies of the first few cards to end of carousel for infinite scrolling
+  carouselChildrens.slice(0, cardPerView).forEach(card => {
+  carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+  });
+  // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+  carousel.classList.add("no-transition");
+  carousel.scrollLeft = carousel.offsetWidth;
+  carousel.classList.remove("no-transition");
+  // Add event listeners for the arrow buttons to scroll the carousel left and right
+  arrowBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+      carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+  });
+  });
+  const dragStart = (e) => {
+  isDragging = true;
+  carousel.classList.add("dragging");
+  // Records the initial cursor and scroll position of the carousel
+  startX = e.pageX;
+  startScrollLeft = carousel.scrollLeft;
+  }
+  const dragging = (e) => {
+  if(!isDragging) return; // if isDragging is false return from here
+  // Updates the scroll position of the carousel based on the cursor movement
+  carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+  }
+  const dragStop = () => {
+  isDragging = false;
+  carousel.classList.remove("dragging");
+  }
+  const infiniteScroll = () => {
+  // If the carousel is at the beginning, scroll to the end
+  if(carousel.scrollLeft === 0) {
+      carousel.classList.add("no-transition");
+      carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+      carousel.classList.remove("no-transition");
+  }
+  // If the carousel is at the end, scroll to the beginning
+  else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+      carousel.classList.add("no-transition");
+      carousel.scrollLeft = carousel.offsetWidth;
+      carousel.classList.remove("no-transition");
+  }
+  // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+  clearTimeout(timeoutId);
+  if(!wrapper.matches(":hover")) autoPlay();
+  }
+  const autoPlay = () => {
+  if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+  // Autoplay the carousel after every 2500 ms
+  timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+  }
+  autoPlay();
+  carousel.addEventListener("mousedown", dragStart);
+  carousel.addEventListener("mousemove", dragging);
+  document.addEventListener("mouseup", dragStop);
+  carousel.addEventListener("scroll", infiniteScroll);
+  wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+  wrapper.addEventListener("mouseleave", autoPlay);
+    var slideIndex = 0;
+  showSlides();
+  var slides,dots;
+  
+  function showSlides() {
+  var i;
+  slides = document.getElementsByClassName("mySlides");
+  dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex> slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 8 seconds
+  }
+  
+  function plusSlides(position) {
+  slideIndex +=position;
+  if (slideIndex> slides.length) {slideIndex = 1}
+  else if(slideIndex<1){slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  }
+  
+  function currentSlide(index) {
+  if (index> slides.length) {index = 1}
+  else if(index<1){index = slides.length}
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[index-1].style.display = "block";  
+  dots[index-1].className += " active";
+  }
+  function openBookPopup() {
+  var bookpopup = document.getElementById("bookpopup");
+  var overlay = document.getElementById("overlay");
+  bookpopup.style.display = "block";
+  overlay.style.display = "block";
+  }
+  
+  function closeBookPopup() {
+  var bookpopup = document.getElementById("bookpopup");
+  var overlay = document.getElementById("overlay");
+  bookpopup.style.display = "none";
+  overlay.style.display = "none";
+  }
+  
+  // Close the popup when clicking outside of it or pressing ESC
+  document.addEventListener('click', function(event) {
+  var bookpopup = document.getElementById("bookpopup");
+  var overlay = document.getElementById("overlay");
+  if (event.target === overlay) {
+  bookpopup.style.display = "none";
+  overlay.style.display = "none";
+  }
+  });
+  document.addEventListener('keydown', function(event) {
+  var bookpopup = document.getElementById("bookpopup");
+  var overlay = document.getElementById("overlay");
+  if (event.key === "Escape") {
+  bookpopup.style.display = "none";
+  overlay.style.display = "none";
+  }
+  });
+    </script>
+  </body>
+  </html>
+  </html>

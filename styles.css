@@ -21,10 +21,7 @@
   margin: auto;
   padding: 5rem 1rem;
 }
-.price {
-  display: flex;
-  justify-content: center;
-}
+
 .section__header {
   margin-bottom: 1rem;
   font-size: 2.25rem;
@@ -55,7 +52,7 @@
   color: var(--white);
 }
 .spacer {
-  height: 2rem; /* Adjust as needed */
+  height: 5%; /* Adjust as needed */
 }
 .section__subheader {
   max-width: 80wh;
@@ -75,6 +72,22 @@
   cursor: pointer;
   transition: 0.3s;
   margin-right: 5%;
+}
+.btn1 {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 5%;
+  
+}
+.btn1:hover {
+  background-color: var(--secondary-color-dark);
 }
 
 .btn:hover {
@@ -255,6 +268,10 @@ nav {
   border: 2px solid transparent;
   border-radius: 10px;
   transition: 0.3s;
+}
+.price {
+  display: flex;
+  justify-content: center;
 }
 
 .explore__card:hover {
@@ -1228,4 +1245,68 @@ iframe {
   color: white; /* Change text color to white */
   font-size: 18px; /* Adjust font size as needed */
   line-height: 1.6; /* Adjust line height for better spacing */
+}
+
+.sliding-box {
+  position: fixed;
+  bottom: 20px;
+  right: -100vh; /* Initially position the box outside the viewport */
+  width: 500px;
+  max-height: 100%;
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds box height */
+  background-color: var(--secondary-color-dark);
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out; /* Apply smooth transition to right property */
+  z-index: 1000;
+}
+
+/* Style for the close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Style for the box content */
+.box-content {
+  text-align: center;
+}
+
+/* Style for heading */
+.box-content h2 {
+  margin-bottom: 10px;
+}
+
+/* Style for paragraph */
+.box-content p {
+  margin-bottom: 20px;
+}
+
+/* Style for input field */
+.box-content input[type="email"] {
+  width: 75%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style for subscribe button */
+.box-content button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for subscribe button */
+.box-content button[type="submit"]:hover {
+  background-color: #0056b3;
 }

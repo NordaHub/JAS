@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="JAS-Distribusjon" content="supplier for MILLIONMINER.com in scandinavia">
+    <meta name="keywords" content="mining-tjeneste, ASICs, JAS">
+    <meta name="Creator" content="Fiddelish(FNX) NordaHub">
+    <meta name="copyright" content="Copyright © 2024 jas-distribusjon">
+    <meta http-equiv="content-language" content="nor"> 
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -11,15 +16,29 @@
     <title>JAS-Distribusjon - Where Quality Mines Success</title>
   </head>
   <body>
+    <div id="sliding-box" class="sliding-box">
+      <span class="close-btn" onclick="closeSlideBox()">&times;</span>
+      <div class="box-content">
+        <!-- Content of the sliding box goes here -->
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get updates delivered straight to your inbox.</p>
+        <form id="subscribe-form">
+          <input type="email" name="email" placeholder="Your Email" required>
+          <button type="submit" class="btn1">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    </div>
     <div class="tkenpricetop">
       <div class="price">
             <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> 
     <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="coins" lcw-marquee-items="10" ></div>
       </div>
     </div>
-  <nav>
+
+    <nav>
       <div class="nav__logo">
-        <a href="#"><img src="assets\logon.png" alt="logo" /></a>
+        <a href="#"><img src="assets\logon.png" alt="logo" /></a> <!-- Insert logo from server -->
       </div>
       <ul class="nav__links">
         <li class="navlink"><a href="index.html">HJEM</a></li>
@@ -32,9 +51,9 @@
       <div id="bookpopup" class="bookpopup">
         <span class="close-btn" onclick="closeBookPopup()">&times;</span>
         <iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1OpoEL9SyyI4FYmIIGgkSDD7A3QYKn_SyG--ENnpgO1O47f4eajwgJ9wDNeySuvLEhpRQBsAJj?gv=true" width="100%" height="100%" frameborder="0"></iframe>
-      </div>
-      
+      </div>    
   </nav>
+  
 <index class="index">
   <lmao class="one">
     <header class="section__container header__container">
@@ -51,7 +70,7 @@
       </div>
       <div class="header_video">
         <video autoplay controls loop class="video__element">
-            <source src=".\assets\JAS-Company-Profile-Norsk.mp4" type="video/mp4">
+            <source src="Video_insert" type="video/mp4">      <!-- video edit landing -->
             Your browser does not support the video tag.
         </video>
     </div>
@@ -60,20 +79,19 @@
 <lmao class="two"> 
         <div class="form-popup" id="myForm"> <div id="overlay" class="overlay"></div>
         <form action="mailto:post@jas-distribusjon.no" method="post" enctype="text/plain" class="contact-form">
-          <h2>Contact Us</h2>
+          <h2>Kontakt Oss</h2>
           <label for="email">Email:</label><br>
           <input type="email" id="email" name="email" required><br><br>
-          <label for="subject">Subject:</label><br>
+          <label for="subject">Emne:</label><br>
           <select id="subject" name="subject" required>
-              <option value="">Select a subject</option>
-              <option value="General Inquiry">General Inquiry</option>
-              <option value="Technical Support">Technical Support</option>
-              <option value="Billing">Billing</option>
-              <option value="Other">Other</option>
+              <option value="">Forespørsel/Tilbud</option>
+              <option value="General Inquiry">Teknisk</option>
+              <option value="Technical Support">Betaling/Faktura</option>
+              <option value="Other">Annet</option>
           </select><br><br>
-          <label for="message">Message:</label><br>
+          <label for="message">Melding:</label><br>
           <textarea id="message" name="message" rows="4" required></textarea><br><br>
-          <p>For immediate assistance, please call us at +47 22 34 33 83.</p>
+          <p>For raskest mulig service, ring oss på +47 22 34 33 83.</p>
           <button type="submit" class="btn">Send</button>
           <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
       </form>
@@ -107,10 +125,6 @@
             <li class="card">
               <h2 class="headercards">REDUNDANT STRØM</h2>
               <span>Pålitelig strømtilførsel med direkte forbindelse med strømkraftverk i nærheten og nødstrøm sikret med diesel aggregat.</span>
-            </li>
-            <li class="card">
-              <h2 class="headercards">REPERASJON OG SERVICE</h2>
-              <span>Om det er noe som helst problemer med dine minere, så fikser våre teknikere problemet for deg på raskest mulig måte.</span>
             </li>
             <li class="card">
               <h2 class="headercards">REPERASJON OG SERVICE</h2>
@@ -254,7 +268,7 @@
       <p>JAS-Distribusjon</p>
       <p>Org.nr: 932 726 920</p>
     </div>
-    <script>
+<script>
       function openForm() {
         document.getElementById("myForm").style.display = "block";
         document.getElementById("overlay").style.display = "block";
@@ -413,6 +427,68 @@ document.addEventListener('keydown', function(event) {
     overlay.style.display = "none";
   }
 });
+
+function closeSlideBox() {
+  var slidingBox = document.getElementById("sliding-box");
+  slidingBox.style.transform = "translateY(100%)"; // Slide out the box
+  slidingBox.addEventListener("transitionend", function() {
+    // Once transition is complete, hide the box
+    slidingBox.style.display = "none";
+  }, { once: true });
+}
+
+// Function to handle scrolling behavior and make the box follow the user
+
+function slideInAfterDelay() {
+  var slidingBox = document.getElementById("sliding-box");
+  setTimeout(function() {
+    slidingBox.style.right = "20px"; // Slide in the box
+  }, 5000); // 5 seconds delay
+}
+
+// Call the function to slide in the box after 5 seconds
+slideInAfterDelay();
+
+function closeSlideBox() {
+  var slidingBox = document.getElementById('sliding-box');
+  slidingBox.style.display = 'none';
+}
+
+function closeSlideBox() {
+  var slidingBox = document.getElementById('sliding-box');
+  slidingBox.style.display = 'none';
+}
+
+document.getElementById('subscribe-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  var email = document.querySelector('input[name="email"]').value;
+
+  // Create a new XMLHttpRequest object
+  var xhr = new XMLHttpRequest();
+
+  // Configure the request
+  xhr.open('POST', 'your_server_endpoint_here', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+
+  // Define the data to be sent to the server
+  var data = JSON.stringify({ email: email });
+
+  // Send the request with the data
+  xhr.send(data);
+
+  // Optional: Handle the response from the server
+  xhr.onload = function() {
+    if (xhr.status >= 200 && xhr.status < 300) {
+      // Success handling
+      console.log('Subscription successful!');
+    } else {
+      // Error handling
+      console.error('Failed to subscribe:', xhr.statusText);
+    }
+  };
+});
       </script>
   </body>
 </html>
+
